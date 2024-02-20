@@ -1,0 +1,15 @@
+name: 'mit10 CI action'
+description: 'Run mit10s command on the repo code'
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Setup Node.js environment'
+      uses: 'actions/setup-node@v4'
+      with:
+        node-version: '18'
+    - name: 'Install mit10s'
+      run: 'npm install -g mit10s'
+      shell: 'bash'
+    - name: 'Run mit10s scout command'
+      run: 'mit10s scout'
+      shell: 'bash'

@@ -1,5 +1,8 @@
 name: 'mit10 CI action'
 description: 'Run mit10s command on the repo code'
+branding:
+  icon: 'shield'
+  color: 'green'
 runs:
   using: 'composite'
   steps:
